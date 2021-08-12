@@ -1,17 +1,17 @@
-//
-//  ContentView.swift
-//  ToDoAppWithSwiftUI
-//
-//  Created by zoniha on 2021/08/12.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+		NavigationView {
+			List {
+				ListRow(task: "Sample")
+				Text("+")
+					.font(.title)
+			}
+			.navigationBarTitle(Text("Tsks"))
+			.navigationBarItems(trailing: Text("Delete"))
+		}
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
