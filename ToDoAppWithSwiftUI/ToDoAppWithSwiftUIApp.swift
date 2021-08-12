@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct ToDoAppWithSwiftUIApp: App {
     var body: some Scene {
-        WindowGroup {
+		WindowGroup {
             ContentView()
+				.environmentObject(UserData())
         }
     }
 }
